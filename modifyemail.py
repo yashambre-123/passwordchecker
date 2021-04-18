@@ -1,14 +1,15 @@
-# here we modify the mail and send it to the users accordingly
+# here we can send email through python
+# Before executing your code, it is neccessary to turn on the secure app access.
 import smtplib
 from email.message import EmailMessage
 email=EmailMessage()
-email['from']='yash ulhas ambre'  # the name 'yash ulhas ambre'
-email['to']='sonalambre8@gmail.com',   # the recievers email address
-email['subject']='helllooo' # the subject
-email.set_content('what is your name?') # the content of the email
+email['from']=''  # just enter your name btw the single quotes
+email['to']='',   # the recievers email address  btw the single quotes
+email['subject']='' # the subject btw the single quotes
+email.set_content('') # the content of the email btw the single quotes
 with smtplib.SMTP(host='smtp.gmail.com',port=587) as smtp:
     smtp.ehlo()
     smtp.starttls()
-    smtp.login('yash2002ambre@gmail.com','hoko@123@123')
+    smtp.login('','') # enter your mail id in the first single quotes, and the password of your mail account in the second single quotes
     smtp.send_message(email)
     print('all good boss')
